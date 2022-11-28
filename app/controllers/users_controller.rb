@@ -6,14 +6,15 @@ class UsersController < ApplicationController
 
   #ログイン後ページ（ログインユーザー詳細ページ）
   def show
-    @books = Book.new
     @user = User.find(params[:id])
+    @book = Book.new
+    @books = @user.books.all
   end
   
   def create
     @book = Book.new(book_params)
     @book.save
-    redirect_to user_path
+    redirect_to user_path(resource)
   end
 
   #プロフィール変更ページ

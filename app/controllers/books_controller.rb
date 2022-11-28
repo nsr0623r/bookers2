@@ -5,11 +5,11 @@ class BooksController < ApplicationController
   
   def create
   end
-
-　#投稿詳細ページ
+  
+  #投稿詳細ページ
   def show
   end
-
+  
   #投稿編集ページ
   def edit
   end
