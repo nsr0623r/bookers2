@@ -1,0 +1,17 @@
+<div class="conteiner">
+  <h2>User info</h2>
+  <div class="content">
+    <%= form_with model: @user do |f| %>
+    <label for="inputName">Name</label>
+    <%= f.text_field :name, autofocus: true %>
+    
+    <label for="inputImape">Image</label>
+    <%= f.file_field :profile_image, accept: 'image/*' %>
+    
+    <label for="inputIntroduction">Introduction</label>
+    <%= f.text_area :introduction %>
+    
+    <%= f.submit 'Update User' %>
+  <% end %>
+  </div>
+</div>
